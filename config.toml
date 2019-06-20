@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Launch on Whole Tale"
 theme = "dot-hugo-documentation-theme"
 defaultContentLanguageInSubdir = false
+
 defaultContentLanguage = "en"
 
 [params]
