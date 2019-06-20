@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Launch on Whole Tale</title>
+    <link>https://wholetale.org/</link>
+    <description>Recent content on Launch on Whole Tale</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Dec 2018 11:02:05 +0600</lastBuildDate>
+    
+	<atom:link href="https://wholetale.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Astronomy</title>
+      <link>https://wholetale.org/samples/astro/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>https://wholetale.org/samples/astro/</guid>
+      <description>Here might be some astro sample datasets.</description>
+    </item>
+    
+    <item>
+      <title>Climate</title>
+      <link>https://wholetale.org/samples/climate/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>https://wholetale.org/samples/climate/</guid>
+      <description>Here might be some climate sample datasets.</description>
+    </item>
+    
+    <item>
+      <title>Ecology</title>
+      <link>https://wholetale.org/samples/ecology/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>https://wholetale.org/samples/ecology/</guid>
+      <description>Here might be some ecology sample datasets.</description>
+    </item>
+    
+    <item>
+      <title>Economics</title>
+      <link>https://wholetale.org/samples/economics/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>https://wholetale.org/samples/economics/</guid>
+      <description>Here might be some economics sample datasets.</description>
+    </item>
+    
+  </channel>
+</rss>
