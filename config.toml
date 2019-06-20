@@ -1,0 +1,103 @@
+baseURL = "https://wholetale.org/"
+languageCode = "en-us"
+title = "Launch on Whole Tale"
+theme = "dot-hugo-documentation-theme"
+defaultContentLanguageInSubdir = false
+defaultContentLanguage = "en"
+
+[params]
+primaryColor = "#00517D"
+secondaryColor = "#2C98D4"
+textColor = "#636363"
+textColorDark = "#242738"
+whiteColor = "#ffffff"
+
+title = "Launch on Whole Tale"
+dateFormat = "2 January 2006"
+home = "Home"
+logo = "Whole Tale"
+copyright = ""
+
+# navigation
+[menu]
+
+  [[menu.main]]
+    weight = 2
+    name = "Docs"
+    url = "https://wholetale.readthedocs.io/"
+    
+  [[menu.main]]
+    weight = 2
+    name = "samples"
+    url = "samples"
+    hasChildren = true
+
+      [[menu.main]]
+      parent = "samples"
+      name = "Astro"
+      url = "samples/astro"
+      weight = 1
+
+      [[menu.main]]
+      parent = "samples"
+      name = "Ecology"
+      url = "samples/ecology"
+      weight = 2
+
+      [[menu.main]]
+      parent = "samples"
+      name = "Climate"
+      url = "samples/climate"
+      weight = 3
+
+      [[menu.main]]
+      parent = "samples"
+      name = "Economics"
+      url = "samples/economics"
+      weight = 4
+
+  [[menu.main]]
+    weight = 3
+    name = "dashboard"
+    url = "https://dashboard.wholetale.org/"
+    
+# banner
+[params.banner]
+  title = "Analyze Data: From Anywhere"
+  description = "A persistent, personal analysis environment for data at a URL or DOI"
+  image = "images/whole_tale_logo.png"
+  placeholder = "URL to a Dataset"
+
+# Topics
+[params.topics]
+  title = "Some Sample Datasets to Explore"
+
+# call to action
+[params.cta]
+  enable = true
+  title = "Want to build something more complex?"
+  description = "Customize your image, collect multiple datasets, curate, subset, and collaborate"
+  btnText = "launch whole tale"
+  btnURL = "https://dashboard.wholetale.org/"
+
+# contact
+[params.contact]
+  title = "Got Any Questions"
+  content = "Submit the form and confirm your email address at <a class='text-primary' href='https://formspree.io/'>Formspree</a> Then add the following lines to contact page YAML Front Matter."
+
+# footer social icon
+[[socialIcon]]
+  icon = "ti-facebook"
+  linkURL = "#"
+
+[[socialIcon]]
+  icon = "ti-twitter-alt"
+  linkURL = "#"
+  
+[[socialIcon]]
+  icon = "ti-vimeo-alt"
+  linkURL = "#"
+  
+[[socialIcon]]
+  icon = "ti-instagram"
+  linkURL = "#"
