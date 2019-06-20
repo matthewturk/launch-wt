@@ -1,4 +1,4 @@
-baseURL = "https://matthewturk.github.io/launch-wt"
+baseURL = "https://matthewturk.github.io/launch-wt/"
 languageCode = "en-us"
 title = "Launch on Whole Tale"
 theme = "dot-hugo-documentation-theme"
