@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <title>Launch on Whole Tale</title>
 
-  <meta name="generator" content="Hugo 0.55.4" />
+  <meta name="generator" content="Hugo 0.55.5" />
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -109,61 +109,31 @@
     <div class="col-lg-8 text-center mx-auto">
     <h1 class="text-white mb-3">Analyze Data: From Anywhere</h1>
     <p class="text-white mb-4">A persistent, personal analysis environment for data at a URL or DOI</p>
-        <div class="position-relative">
+        <div class="position-relative" id="urlinput">
         <input id="search" class="form-control" placeholder="URL to a Dataset">
-        
-        <script>
-            $(function() {
-            var projects = [
-                
-                {
-                    value: "Astronomy",
-                    label: "Astronomy",
-                    url:"https:\/\/matthewturk.github.io\/launch-wt\/samples\/astro\/"
-                },
-                
-                {
-                    value: "Climate",
-                    label: "Climate",
-                    url:"https:\/\/matthewturk.github.io\/launch-wt\/samples\/climate\/"
-                },
-                
-                {
-                    value: "Ecology",
-                    label: "Ecology",
-                    url:"https:\/\/matthewturk.github.io\/launch-wt\/samples\/ecology\/"
-                },
-                
-                {
-                    value: "Economics",
-                    label: "Economics",
-                    url:"https:\/\/matthewturk.github.io\/launch-wt\/samples\/economics\/"
-                },
-                
-            ];
-            $( "#search" ).autocomplete({
-                minLength: 0,
-                source: projects,
-                focus: function( event, ui ) {
-                    $( "#search" ).val( ui.item.label );
-                    return false;
-                },
-                select: function( event, ui ) {
-                    $( "#search" ).val( ui.item.label );
-                    $( "#project-id" ).val( ui.item.value );
-                    return false;
-                }
-            })
-            .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
-                return $( "<li>" )
-                .append( "<a href=" + item.url + " + \" &quot;\" +  >" + item.label + "</a>" )
-                .appendTo( ul );
-            };
-            });
-        </script>
         <div class="w-100 m-2">
-        <button type="button" class="w-25 btn btn-info">Jupyter</button>
-        <button type="button" class="w-25 btn btn-info">RStudio</button>
+            <button type="button" class="w-25 btn btn-info" data-default=true data-frontend="JupyterLab">JupyterLab</button>
+            <button type="button" class="w-25 btn btn-info" data-frontend="RStudio">RStudio</button>
+            <script>
+                $("#urlinput button").each(function() {
+                    $(this).click(function() { 
+                        
+                        var params = $.param({
+                            'uri': $("#search").val(),
+                            'environment': $(this).data("frontend")
+                        });
+                        window.location = "https://dashboard.wholetale.org/compose?" + params;
+
+                    });
+                    if ($(this).data('default')) {
+                        $("#search").on("keyup", event => {
+                            if (event.key != "Enter") return;
+                            this.click();
+                            event.preventDefault();
+                        });
+                    };
+                });
+            </script>
         </div>
         </div>
     </div>
